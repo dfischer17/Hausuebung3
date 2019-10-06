@@ -54,6 +54,14 @@ public class StreamsTest {
         double result = instance.average(numbers);
         assertEquals(expResult, result, 0.0);
     }
+    
+    public void myTestAverage() {
+        Streams instance = new Streams();
+        int[] arr = {0, 10};
+        double expResult = 5.0;
+        double result = instance.average(arr);
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of upperCase method, of class Streams.
@@ -65,6 +73,14 @@ public class StreamsTest {
         Streams instance = new Streams();
         List<String> expResult = Arrays.asList("FOO", "BAR");
         List<String> result = instance.upperCase(strings);
+        assertEquals(expResult, result);
+    }
+    
+    public void myTestUpperCase() {
+        Streams instance = new Streams();
+        String[] input = {"abc", "xyz"};
+        List<String> result = instance.upperCase(input);
+        List<String> expResult = Arrays.asList("ABC", "XYZ");
         assertEquals(expResult, result);
     }
 
