@@ -24,6 +24,5 @@ public class Main {
         final Mapper<String, String> stringMapper = str -> ">> " + str.toUpperCase() + "<< ";
         final List<String> uppercaseNames = stringMapper.mapAll(names);
         System.out.println(uppercaseNames);
-    }
-    
+    }    
 }

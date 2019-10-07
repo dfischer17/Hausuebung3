@@ -5,10 +5,19 @@
  */
 package main;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  *
  * @author Daniel Fischer
  */
 public interface Mapper<S, T> {
-    S map(T source);
+
+    T map(S source);
+
+    default List<T> mapAll(List<S> source) {
+        return source.stream().map(s1 -> map(s1)).collect(Collectors.toList()
+        );
+    }
 }
